@@ -3,10 +3,24 @@ syntax = "proto3";
 option java_multiple_files = true;
 option java_package = "org.francd.model";
 
+message Address {
+  int32 zipcode = 1;
+  string street = 2;
+  string city = 3;
+}
+
+message Car {
+  string maker = 1;
+  string model = 2;
+  int32 year = 3;
+}
+
 /*
  Person message
  */
 message Person {
   string name = 1;    // name
   int32 age = 2;      // age
+  Address address = 3;
+  Car car = 4;
 }
