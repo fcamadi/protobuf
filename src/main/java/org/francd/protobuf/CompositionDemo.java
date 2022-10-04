@@ -4,6 +4,8 @@ import org.francd.model.Address;
 import org.francd.model.Car;
 import org.francd.model.Person;
 
+import java.util.List;
+
 public class CompositionDemo {
 
     public static void main(String[] args) {
@@ -20,11 +22,17 @@ public class CompositionDemo {
                 .setYear(2002)
                 .build();
 
+        Car car2 = Car.newBuilder()
+                .setMaker("BMB")
+                .setModel("1m23")
+                .setYear(2012)
+                .build();
+
         Person menganito = Person.newBuilder()
                 .setName("Menganito")
                 .setAge(33)
                 .setAddress(address)
-                .setCar(car)
+                .addAllCar(List.of(car, car2))
                 .build();
 
         System.out.println(menganito);
