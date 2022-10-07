@@ -1,5 +1,6 @@
 package org.francd.protobuf;
 
+import org.francd.model.BodyStyle;
 import org.francd.model.Car;
 import org.francd.model.Dealer;
 
@@ -11,6 +12,7 @@ public class MapDemo {
                 .setMaker("Susuki")
                 .setModel("Mokon")
                 .setYear(2002)
+                .setBodyStyle(BodyStyle.COUPE)
                 .build();
 
         Car car2 = Car.newBuilder()
@@ -26,6 +28,7 @@ public class MapDemo {
 
         System.out.println(dealer.getModelOrThrow(2002));
         System.out.println(dealer.getModelOrDefault(2002, car));
+        System.out.println(dealer.getModelOrThrow(2002).getBodyStyle());
     }
 }
 
