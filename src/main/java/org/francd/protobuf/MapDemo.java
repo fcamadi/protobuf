@@ -1,7 +1,7 @@
 package org.francd.protobuf;
 
-import org.francd.model.BodyStyle;
-import org.francd.model.Car;
+import org.francd.model.common.BodyStyle;
+import org.francd.model.common.Car;
 import org.francd.model.Dealer;
 
 public class MapDemo {

@@ -1,7 +1,7 @@
 package org.francd.protobuf;
 
-import org.francd.model.Address;
-import org.francd.model.Car;
+import org.francd.model.common.Address;
+import org.francd.model.common.Car;
 import org.francd.model.Person;
 
 import java.util.List;
