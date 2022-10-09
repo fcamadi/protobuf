@@ -1,5 +1,6 @@
 package org.francd.protobuf;
 
+import com.google.protobuf.Int32Value;
 import org.francd.model.Person;
 
 import java.io.IOException;
@@ -11,9 +12,10 @@ public class PersonDemo {
 
     public static void main(String[] args) throws IOException {
 
-        Person fulanito = org.francd.model.Person.newBuilder()
+        Person fulanito = Person.newBuilder()
                 .setName("Fulanito")
-                .setAge(33)
+                //.setAge(33)
+                .setAge(Int32Value.of(33))
                 .build();
         System.out.println(fulanito);
 

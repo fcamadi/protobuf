@@ -1,5 +1,6 @@
 package org.francd.protobuf;
 
+import com.google.protobuf.Int32Value;
 import org.francd.model.common.Address;
 import org.francd.model.common.Car;
 import org.francd.model.Person;
@@ -30,7 +31,7 @@ public class CompositionDemo {
 
         Person menganito = Person.newBuilder()
                 .setName("Menganito")
-                .setAge(33)
+                .setAge(Int32Value.of(33))
                 .setAddress(address)
                 .addAllCar(List.of(car, car2))
                 .build();

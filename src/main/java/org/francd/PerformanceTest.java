@@ -1,6 +1,7 @@
 package org.francd;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.protobuf.Int32Value;
 import org.francd.json.PersonDto;
 import org.francd.model.Person;
 
@@ -29,7 +30,7 @@ public class PerformanceTest {
         //Protobuf
         Person personProto = Person.newBuilder()
                 .setName("ProtPerson")
-                .setAge(44)
+                .setAge(Int32Value.of(44))
                 .build();
 
         Runnable runnableProtobuf = () -> {

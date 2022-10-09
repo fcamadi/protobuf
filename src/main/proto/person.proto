@@ -2,6 +2,7 @@ syntax = "proto3";
 
 import "common/address.proto";
 import "common/car.proto";
+import "google/protobuf/wrappers.proto";
 
 option java_multiple_files = true;
 option java_package = "org.francd.model";
@@ -11,7 +12,7 @@ option java_package = "org.francd.model";
  */
 message Person {
   string name = 1;    // name
-  int32 age = 2;      // age
+  google.protobuf.Int32Value age = 2;      // age
   common.Address address = 3;
   repeated common.Car car = 4;
 }
